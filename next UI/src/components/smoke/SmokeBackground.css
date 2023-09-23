@@ -1,0 +1,32 @@
+.smoke-container {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(200, 200, 200, 0.4);
+  animation: flow 5s infinite linear;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+
+
+/* .smoke {
+  position: absolute;
+  background-color: rgba(200, 200, 200, 0.2);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: spread 5s infinite linear;
+} */
+
+
