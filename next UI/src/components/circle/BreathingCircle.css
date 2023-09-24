@@ -1,61 +1,26 @@
-.breathing-circle {
-    width: 100px;
-    height: 100px;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-  }
-  
-  .text {
-    color: white;
-    font-weight: bold;
-  }
-  
-  .breath-in {
-    animation: breathInAnimation 8s infinite;
-  }
-  
-  .hold {
-    animation: holdAnimation 8s infinite;
-  }
-  
-  .exhale {
-    animation: exhaleAnimation 8s infinite;
-  }
-  
-  @keyframes breathInAnimation {
-    0%, 100% {
-      transform: scale(0.8);
-      opacity: 0.6;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes holdAnimation {
-    0%, 50% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    25%, 75% {
-      transform: scale(1.1);
-      opacity: 0.8;
-    }
-  }
-  
-  @keyframes exhaleAnimation {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(0.8);
-      opacity: 0.6;
-    }
-  }
-  
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.btn{
+  border: 2px solid #000;
+  margin-top: 50px;
+}
+.circle {
+  width: 50vmin; 
+  height: 50vmin;
+  border: 2px solid #fff; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; 
+  color: #fff; 
+  text-align: center;
+}
+
+.text {
+  margin-bottom: 10px; 
+}

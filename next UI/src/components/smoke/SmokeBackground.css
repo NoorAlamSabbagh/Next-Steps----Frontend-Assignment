@@ -1,32 +1,51 @@
 .smoke-container {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(200, 200, 200, 0.4);
-  animation: flow 5s infinite linear;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-@keyframes flow {
+.smoke {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.smoke span {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 120px;
+  background: #fff; /* Set the smoke color to white */
+  border-radius: 50%;
+  margin: 0 5px;
+  bottom: 0;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+@keyframes animate {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) scaleX(5);
+  }
+  95% {
     opacity: 0;
   }
   100% {
-    transform: translateY(-100%);
-    opacity: 1;
+    transform: translateY(-100vh) scaleX(10);
   }
 }
-
-
-/* .smoke {
-  position: absolute;
-  background-color: rgba(200, 200, 200, 0.2);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  animation: spread 5s infinite linear;
-} */
-
-
